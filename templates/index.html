@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>OAuth</title>
+    </head>
+    <body>
+        {% if name %}
+            Hello, {{ name }} !<br>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        {% else %}
+            <a href="{{ url_for('google') }}">Login with Google</a> <br>
+        {% endif %}
+    </body>
+</html>
